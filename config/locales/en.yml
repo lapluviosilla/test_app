@@ -3,15 +3,24 @@
 
 en:
   hello: "Hello world"
-  
-  activerecord:
-    attributes:
+  posts:
+    new:
+      new_thing: "New Thing"
+  formtastic:
+    labels:
       post:
         title: Title (I18n)
         body: Body (I18n)
+        thing: "Thing"
+        new_thing:
+          name: Name (I18n) - doesn't work
+          about: About (I18n) - doesn't work
       thing:
         name: Name (I18n)
         about: About (I18n)
+      new_thing:
+        name: Name (I18n) - doesn't work
+        about: About(I18n) - doesn't work
       
 pl: 
   activerecord:

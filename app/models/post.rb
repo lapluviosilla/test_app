@@ -2,7 +2,7 @@ class Post < ActiveRecord::Base
   
   # attr_accessible :thing
   
-  has_one :thing, :dependent => :destroy
+  belongs_to :thing
   accepts_nested_attributes_for :thing, :allow_destroy => false
   
   validates_presence_of :title

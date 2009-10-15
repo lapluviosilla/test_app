@@ -7,10 +7,13 @@
     = f.input :title
     = f.input :body, :input_html => {:rows => 8}
     = f.input :published
+  
+  = f.input :thing, :collection => @things, :prompt => t('.new_thing')
     
-  - f.inputs :title => '<strong>f.inputs(:for => :thing) <span class="fail">*FAIL*</span></strong>', :for => :thing do |g|
-    = g.input :name
-    = g.input :about, :input_html => {:rows => 8}
+  - semantic_fields_for :new_thing, :title => '<strong>f.inputs(:for => :thing) <span class="fail">*FAIL*</span></strong>' do |g|
+    - g.inputs :title => '<strong>f.inputs(:for => :thing) <span class="fail">*FAIL*</span></strong>' do
+      = g.input :name
+      = g.input :about, :input_html => {:rows => 8}
     
   - f.buttons do
     = f.commit_button

@@ -23,6 +23,8 @@ class PostsController < ApplicationController
     @post = Post.new
     @post.build_thing
     template_format = params[:format] || 'erb'
+    
+    @things = Thing.all
     #firebug.debug 'Check 1-2-1'
     # I18n.locale = 'sv'
     respond_to do |format|
@@ -47,6 +49,12 @@ class PostsController < ApplicationController
     @post = Post.new(params[:post])
     @post.build_thing unless @post.thing.present?
     template_format = params[:format] || 'erb'
+    
+    @new_thing = Thing.new(params[:new_thing])
+    # If the user didn't choose an existing thing then use the "new thing"
+    if @post.thing.nil?
+      @post.event = @new_thing
+    end
     
     respond_to do |format|
       if @post.save
