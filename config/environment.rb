@@ -15,9 +15,9 @@ Rails::Initializer.run do |config|
   # config.load_paths += %W( #{RAILS_ROOT}/extras )
 
   # Specify gems that this application depends on and have them installed with rake gems:install
-  config.gem 'validatious-on-rails', :version => "0.3.7"
-  config.gem 'validation_reflection'
-  config.gem 'formtastic', :version => '0.2.5'
+  config.gem 'validation_reflection', :version => "0.3.5"
+  config.gem 'formtastic', :version => '0.9.0'
+  config.gem 'searchlogic', :version => '2.3.5'
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named

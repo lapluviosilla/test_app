@@ -1,0 +1,15 @@
+== TODO
+
+== Should
+
+* Better validator naming convention: UniquenessValidator => UniquenessOfValidator, etc.
+* Validator API: Custom validators (client-side + remote)
+* Form Input Helper API: Custom form helpers (non-"core helper" based)
+* Make Rails core validations basic options fully supported
+  * :on => :create|:save|:update (not easy - RemoteValidator?)
+  * :if/:unless => true|false (not easy - RemoteValidator?)
+* Tighten up the tests more.
+
+== Maybe
+
+* validates_association

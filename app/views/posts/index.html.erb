@@ -1,3 +1,11 @@
+<div>
+  <h3>Search posts</h3>
+  <% form_for @search, :url => posts_path do |s| %>
+    <%= s.text_field :title_like %>
+    <%= s.submit "Search" %>
+  <% end %>
+</div>
+
 <h1>Listing posts</h1>
 
 <table>
